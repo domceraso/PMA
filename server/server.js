@@ -34,6 +34,8 @@ var userSchema = new mongoose.Schema({
     collection: 'users'
 });
 
+/*
+
 var propOwnersSchema = new mongoose.Schema({
     bizName: {
         type: String,
@@ -64,6 +66,8 @@ var propOwnersSchema = new mongoose.Schema({
     collection: 'propOwners'
 });
 
+*/
+
 // use JWT auth to secure the api, the token can be passed in the authorization header or querystring
 app.use(expressJwt({
     secret: config.secret,
@@ -84,15 +88,8 @@ mongoose.connect('mongodb://steelcitydev:Racecar910@ds163294.mlab.com:63294/pma'
     uri_decode_auth: true 
 });
 
-var Model = mongoose.model('Model', propOwnersSchema);
-mongoose.connect('mongodb://steelcitydev:Racecar910@ds163294.mlab.com:63294/pma', {
-    useMongoClient: true,
-    uri_decode_auth: true 
-});
-
 // routes
 app.use('/users', require('./controllers/users.controller'));
-app.use('/users/owners', require('./controllers/owners.controller'));
 
 // start server
 var port = process.env.NODE_ENV === 'production' ? 80 : 4000;
