@@ -84,7 +84,7 @@ app.use(expressJwt({
 
 var Model = mongoose.model('Model', userSchema);
 mongoose.connect('mongodb://steelcitydev:Racecar910@ds163294.mlab.com:63294/pma', {
-    useMongoClient: true,
+    useMongoClient: true
  // uri_decode_auth: true 
 });
 
