@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="container">
+        <div class="dashboard">
+            <h2>Leases</h2>
+        </div>    
+    </div>
+</div>
+        <div class="row">
+            <div class="col-xs-24 col-sm-12 col-md-12">
+                <button type="button" class="btn btn-default">Add Lease</button>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-primary">Receive Payment</button>
+                  <button type="button" class="btn btn-primary">Update Charges</button>
+                  <button type="button" class="btn btn-primary">Enter Bulk Charges</button>
+                  <button type="button" class="btn btn-primary">Update Existing Lease</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-24 col-sm-12 col-md-12">
+            <form class="search-form" role="search">
+               <input type="text" class="form-control" placeholder="Search Leases..." />
+            </form>
+            </div>
+            <div style="overflow:auto">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <td>{{propOwner.bizName}}</td>
+                            <td>{{propOwner.address}}</td>
+                            <td>{{propOwner.units}}</td>
+                            <td>{{propOwner.isActive}}</td>
+                            <td>{{propOwner.daysRemaining}}</td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>

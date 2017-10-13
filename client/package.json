@@ -1,0 +1,39 @@
+{
+    "name": "pma",
+    "version": "1.0.0",
+    "description": "ca properties - property management application",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "scripts": {
+        "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
+        "lite": "lite-server",
+        "tsc": "tsc",
+        "tsc:w": "tsc -w"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "@angular/common": "^4.0.0",
+        "@angular/compiler": "^4.0.0",
+        "@angular/core": "^4.0.0",
+        "@angular/forms": "^4.0.0",
+        "@angular/http": "^4.0.0",
+        "@angular/platform-browser": "^4.0.0",
+        "@angular/platform-browser-dynamic": "^4.0.0",
+        "@angular/router": "^4.0.0",
+        "core-js": "^2.4.1",
+        "mongoose": "^4.11.10",
+        "rxjs": "^5.2.0",
+        "systemjs": "^0.19.47",
+        "zone.js": "^0.8.5"
+    },
+    "devDependencies": {
+        "@angular/cli": "^1.4.0",
+        "@types/node": "^6.0.89",
+        "concurrently": "^3.1.0",
+        "gulp-typescript": "^2.13.6",
+        "lite-server": "^2.3.0",
+        "typescript": "^2.0.2"
+    }
+}
